@@ -1,7 +1,5 @@
 package practice.trees;
 
-import java.util.HashSet;
-
 public class OnlyLeftView {
 
   private static int max_level = 0;

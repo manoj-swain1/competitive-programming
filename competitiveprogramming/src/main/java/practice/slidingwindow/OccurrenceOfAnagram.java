@@ -1,50 +1,13 @@
 package practice.slidingwindow;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class OccurrenceOfAnagram {
 
   public int occurrenceOfAnagram(String s, String pattern) {
-    /*var charOccurrence = pattern.chars().mapToObj(Character::toString)
-        .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
-    var k = pattern.length();
 
-    int i = 0, j = 0;
-    var uniqueCharacters = charOccurrence.size();
-    var anagramCount = 0;
-    var anagramIndex = new ArrayList<>();
-    while (j < s.length()) {
-      String character = String.valueOf(s.charAt(j));
-      if (charOccurrence.get(character) != null) {
-        charOccurrence.put(character, charOccurrence.get(character) - 1L);
-      }
-      if (charOccurrence.get(character) == 0) {
-        uniqueCharacters--;
-      }
-      if (j - i + 1 < k) {
-        j++;
-      } else if (j - i + 1 == k) {
-
-        if (uniqueCharacters == 0) {
-          anagramIndex.add(i);
-          anagramCount++;
-        }
-        character = String.valueOf(s.charAt(i));
-        if (charOccurrence.get(character) != null) {
-          charOccurrence.put(character, charOccurrence.get(character) + 1L);
-
-        }
-        if (charOccurrence.get(character) == 1) {
-          uniqueCharacters++;
-        }
-        i++;
-        j++;
-      }
-
-    }
-    return anagramCount;*/
+    Collection<String> c;
+c=new TreeSet<>();
     List<Integer> anagramIndices=new ArrayList<>();
     var charOcuurence=new HashMap<String,Integer>();
     int uniqueCharacters=0;
@@ -91,7 +54,7 @@ public class OccurrenceOfAnagram {
 
   public static void main(String[] args) {
     OccurrenceOfAnagram o = new OccurrenceOfAnagram();
-
+Integer[] arr={};
     String s = "abab";
     String ptrn = "ab";
     System.out.println(o.occurrenceOfAnagram(s, ptrn));
